@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F29C9C3-B100-49FF-BCA5-8014732D358C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogiS</RootNamespace>
+    <AssemblyName>LogiS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassConnexionDB.cs" />
+    <Compile Include="ClassFournisseur.cs" />
+    <Compile Include="ClassGen.cs" />
+    <Compile Include="ClassPays.cs" />
+    <Compile Include="ClassPrevision.cs" />
+    <Compile Include="ClassProduit.cs" />
+    <Compile Include="DataSetClient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFacture.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacture.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFour.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFour.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPays.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPays.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProduit.cs">
+      <DependentUpon>DataSetProduit.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetProduit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProduit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccueil.Designer.cs">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientNew.Designer.cs">
+      <DependentUpon>FormClientNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactureNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactureNew.Designer.cs">
+      <DependentUpon>FormFactureNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFacture.Designer.cs">
+      <DependentUpon>FormFacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFournisseur.Designer.cs">
+      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFournisseurNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFournisseurNew.Designer.cs">
+      <DependentUpon>FormFournisseurNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPays.Designer.cs">
+      <DependentUpon>FormPays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrevision.Designer.cs">
+      <DependentUpon>FormPrevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrevisionParVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrevisionParVolume.Designer.cs">
+      <DependentUpon>FormPrevisionParVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrevisionRecherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrevisionRecherche.Designer.cs">
+      <DependentUpon>FormPrevisionRecherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduit.Designer.cs">
+      <DependentUpon>FormProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactureRecherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactureRecherche.Designer.cs">
+      <DependentUpon>FormFactureRecherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUniteProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUniteProduit.Designer.cs">
+      <DependentUpon>FormUniteProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdiPrevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdiPrevision.Designer.cs">
+      <DependentUpon>MdiPrevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAccueil.resx">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFactureNew.resx">
+      <DependentUpon>FormFactureNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFacture.resx">
+      <DependentUpon>FormFacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFactureRecherche.resx">
+      <DependentUpon>FormFactureRecherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFournisseur.resx">
+      <DependentUpon>FormFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFournisseurNew.resx">
+      <DependentUpon>FormFournisseurNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPays.resx">
+      <DependentUpon>FormPays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrevision.en-US.resx">
+      <DependentUpon>FormPrevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrevision.resx">
+      <DependentUpon>FormPrevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrevisionParVolume.resx">
+      <DependentUpon>FormPrevisionParVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrevisionRecherche.resx">
+      <DependentUpon>FormPrevisionRecherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduit.resx">
+      <DependentUpon>FormProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUniteProduit.resx">
+      <DependentUpon>FormUniteProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdiPrevision.resx">
+      <DependentUpon>MdiPrevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataSetClient.xsc">
+      <DependentUpon>DataSetClient.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetClient.xss">
+      <DependentUpon>DataSetClient.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacture.xsc">
+      <DependentUpon>DataSetFacture.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacture.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacture.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFacture.xss">
+      <DependentUpon>DataSetFacture.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFour.xsc">
+      <DependentUpon>DataSetFour.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFour.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFour.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFour.xss">
+      <DependentUpon>DataSetFour.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPays.xsc">
+      <DependentUpon>DataSetPays.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPays.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPays.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetPays.xss">
+      <DependentUpon>DataSetPays.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProduit.xsc">
+      <DependentUpon>DataSetProduit.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProduit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProduit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetProduit.xss">
+      <DependentUpon>DataSetProduit.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
