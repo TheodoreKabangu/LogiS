@@ -165,6 +165,26 @@ namespace LogiS
             else
                 MessageBox.Show("Désolé! Ce pays ne peut être supprimé car il est impliqué dans les prévisions", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+        public void NouvelleUnite(FormProduit p)
+        {
+            FormProduitUnite u = new FormProduitUnite();
+            for (int i = 0; i < p.cboUnite.Items.Count; i++)
+            {
+                u.dgvProduit.Rows.Add();
+                u.dgvProduit.Rows[i].Cells[0].Value = p.cboUnite.Items[i];
+            }
+            u.ShowDialog();
+            if(u.succes)
+            {
+                p.cboUnite.Items.Clear();
+                for (int i = 0; i < u.dgvProduit.RowCount; i++)
+                {
+                    p.cboUnite.Items.Add(u.dgvProduit.Rows[i].Cells[0].Value.ToString());
+                }
+            }
+            u.Close();
+        }
+
         #endregion
     }
 }

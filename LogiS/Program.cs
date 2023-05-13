@@ -16,7 +16,7 @@ namespace LogiS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormFournisseur());
+            Application.Run(new FormProduit());
         }
     }
 }

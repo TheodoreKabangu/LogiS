@@ -77,5 +77,10 @@ namespace LogiS
         {
             p.TestValeurFloat(txtVolume);
         }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            p.NouvelleUnite(this);
+        }
     }
 }

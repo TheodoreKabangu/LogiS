@@ -1,6 +1,6 @@
 ﻿namespace LogiS
 {
-    partial class FormUniteProduit
+    partial class FormProduitUnite
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUniteProduit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduitUnite));
             this.dgvProduit = new System.Windows.Forms.DataGridView();
             this.txtUnite = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -118,6 +118,7 @@
             this.btnAjouter.TabIndex = 797;
             this.toolTip1.SetToolTip(this.btnAjouter, "Ajouter");
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // Column1
             // 

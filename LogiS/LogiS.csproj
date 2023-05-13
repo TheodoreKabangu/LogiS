@@ -158,11 +158,11 @@
     <Compile Include="FormFactureRecherche.Designer.cs">
       <DependentUpon>FormFactureRecherche.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUniteProduit.cs">
+    <Compile Include="FormProduitUnite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUniteProduit.Designer.cs">
-      <DependentUpon>FormUniteProduit.cs</DependentUpon>
+    <Compile Include="FormProduitUnite.Designer.cs">
+      <DependentUpon>FormProduitUnite.cs</DependentUpon>
     </Compile>
     <Compile Include="MdiPrevision.cs">
       <SubType>Form</SubType>
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="FormProduit.resx">
       <DependentUpon>FormProduit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUniteProduit.resx">
-      <DependentUpon>FormUniteProduit.cs</DependentUpon>
+    <EmbeddedResource Include="FormProduitUnite.resx">
+      <DependentUpon>FormProduitUnite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MdiPrevision.resx">
       <DependentUpon>MdiPrevision.cs</DependentUpon>
