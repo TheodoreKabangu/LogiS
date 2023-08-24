@@ -448,7 +448,6 @@ namespace LogiS {
                 this.columnidclient.Unique = true;
                 this.columnnomclient.AllowDBNull = false;
                 this.columnnomclient.MaxLength = 50;
-                this.columntelephone.AllowDBNull = false;
                 this.columntelephone.MaxLength = 20;
                 this.columnemail.MaxLength = 100;
             }
@@ -617,7 +616,12 @@ namespace LogiS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string telephone {
                 get {
-                    return ((string)(this[this.tableClient.telephoneColumn]));
+                    try {
+                        return ((string)(this[this.tableClient.telephoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'telephone\' in table \'Client\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableClient.telephoneColumn] = value;
@@ -638,6 +642,18 @@ namespace LogiS {
                 set {
                     this[this.tableClient.emailColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstelephoneNull() {
+                return this.IsNull(this.tableClient.telephoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettelephoneNull() {
+                this[this.tableClient.telephoneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -819,20 +835,19 @@ namespace LogiS.DataSetClientTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Client] WHERE (([idclient] = @Original_idclient) AND ([nomclie" +
-                "nt] = @Original_nomclient) AND ([telephone] = @Original_telephone) AND ((@IsNull" +
-                "_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Client] WHERE (([idclient] = @Original_idclient) AND ([nomclient] = @Original_nomclient) AND ((@IsNull_telephone = 1 AND [telephone] IS NULL) OR ([telephone] = @Original_telephone)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idclient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idclient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomclient", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomclient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telephone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telephone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telephone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telephone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Client] ([idclient], [nomclient], [telephone], [email]) VALUES" +
-                " (@idclient, @nomclient, @telephone, @email);\r\nSELECT idclient, nomclient, telep" +
-                "hone, email FROM Client WHERE (idclient = @idclient)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Client] ([idclient], [nomclient], [telephone], [email]) VALUES (@idc" +
+                "lient, @nomclient, @telephone, @email);\r\nSELECT idclient, nomclient, telephone, " +
+                "email FROM Client WHERE (idclient = @idclient)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idclient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idclient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomclient", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomclient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -840,7 +855,7 @@ namespace LogiS.DataSetClientTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Client] SET [idclient] = @idclient, [nomclient] = @nomclient, [telephone] = @telephone, [email] = @email WHERE (([idclient] = @Original_idclient) AND ([nomclient] = @Original_nomclient) AND ([telephone] = @Original_telephone) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Client] SET [idclient] = @idclient, [nomclient] = @nomclient, [telephone] = @telephone, [email] = @email WHERE (([idclient] = @Original_idclient) AND ([nomclient] = @Original_nomclient) AND ((@IsNull_telephone = 1 AND [telephone] IS NULL) OR ([telephone] = @Original_telephone)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)));
 SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idclient)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idclient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idclient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -849,6 +864,7 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idclient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idclient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomclient", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomclient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telephone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telephone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telephone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telephone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -867,7 +883,7 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idclient, nomclient, telephone, email FROM dbo.Client";
+            this._commandCollection[0].CommandText = "SELECT idclient, nomclient, telephone, email\r\nFROM   Client";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -937,18 +953,20 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_nomclient));
             }
             if ((Original_telephone == null)) {
-                throw new global::System.ArgumentNullException("Original_telephone");
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_telephone));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_telephone));
             }
             if ((Original_email == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_email));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_email));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -979,7 +997,7 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nomclient));
             }
             if ((telephone == null)) {
-                throw new global::System.ArgumentNullException("telephone");
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(telephone));
@@ -1019,7 +1037,7 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nomclient));
             }
             if ((telephone == null)) {
-                throw new global::System.ArgumentNullException("telephone");
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(telephone));
@@ -1038,18 +1056,20 @@ SELECT idclient, nomclient, telephone, email FROM Client WHERE (idclient = @idcl
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_nomclient));
             }
             if ((Original_telephone == null)) {
-                throw new global::System.ArgumentNullException("Original_telephone");
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_telephone));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_telephone));
             }
             if ((Original_email == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_email));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_email));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -101,15 +101,9 @@ namespace LogiS
         {
             AppelSousForm(this, new FormFacture());
         }
-
-        private void btnAfficher_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFourn_Click(object sender, EventArgs e)
         {
-            new FormFournisseur().ShowDialog();
+            AppelSousForm(this, new FormFournisseur());
         }
     }
 }

@@ -14,13 +14,6 @@ namespace LogiS
 {
     class ClassPrevision : ClassGen
     {
-        static string conString = ConfigurationManager.ConnectionStrings["LogiS.Properties.Settings.constring"].ConnectionString;
-        static SqlConnection con = new SqlConnection(conString);
-        static SqlCommand cmd;
-        static SqlDataAdapter da;
-        static SqlDataReader dr;
-        static DataTable dt = new DataTable();
-
         #region Propriétés
         private int idprevision;
         private string dateprevision;
@@ -387,8 +380,6 @@ namespace LogiS
         }
         public void Supprimer(FormPrevision p)
         {
-            //supprimer prévision
-            //
             pp.SupprimerProduitProvision(p);
         }
 

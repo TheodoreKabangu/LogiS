@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
 using System.Drawing;
 
 namespace LogiS
@@ -19,12 +18,6 @@ namespace LogiS
         //private string monnaie;
         #endregion
 
-        static string conString = ConfigurationManager.ConnectionStrings["LogiS.Properties.Settings.constring"].ConnectionString;
-        SqlConnection con = new SqlConnection(conString);
-        SqlCommand cmd;
-        SqlDataAdapter da;
-        SqlDataReader dr;
-        DataTable dt = new DataTable();
 
         #region Opérations       
         
@@ -33,11 +26,14 @@ namespace LogiS
             p.txtPays.Clear();
             p.txtMonnaie.Clear();
             p.dgvPays.DataSource = null;
+            p.btnModifier.Enabled = false;
+            p.btnSupprimer.Enabled = false;
+            p.btnAjouter.Enabled = true;
             p.txtPays.Focus();
         }
         public void Afficher(TextBox txt, DataGridView dgv)
         {
-            con.Open();
+            con.Close();
             try
             {
                 if (txt.Text != "")
@@ -97,6 +93,7 @@ namespace LogiS
                 p.txtMonnaie.Text = p.dgvPays.CurrentRow.Cells[2].Value.ToString();
                 p.btnModifier.Enabled = true;
                 p.btnSupprimer.Enabled = true;
+                p.btnAjouter.Enabled = false;
             }
         }
         public void Modifier(FormPays p)
@@ -123,6 +120,7 @@ namespace LogiS
                 }
                 con.Close();
                 Annuler(p);
+                Afficher(p.txtPays, p.dgvPays);
             }
             else
             {
@@ -151,9 +149,10 @@ namespace LogiS
                 }
                 con.Close();
                 Annuler(p);
+                Afficher(p.txtPays, p.dgvPays);
             }
             else
-                MessageBox.Show("Désolé! Ce pays ne peut être supprimé car il est impliqué dans les prévisions", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Désolé! Ce pays ne peut être supprimé car il est impliqué dans certaines opérations dans le système", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         #endregion

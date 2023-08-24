@@ -295,6 +295,12 @@ namespace LogiS {
             
             private global::System.Data.DataColumn columnbanque;
             
+            private global::System.Data.DataColumn columnnompays;
+            
+            private global::System.Data.DataColumn columnnomfour;
+            
+            private global::System.Data.DataColumn columnidpays;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public FournisseurDataTable() {
@@ -394,6 +400,30 @@ namespace LogiS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nompaysColumn {
+                get {
+                    return this.columnnompays;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomfourColumn {
+                get {
+                    return this.columnnomfour;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idpaysColumn {
+                get {
+                    return this.columnidpays;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +459,7 @@ namespace LogiS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FournisseurRow AddFournisseurRow(int idfour, string person_contact, string telephone, string email, string numcompte, string intitule, string code_swift, string banque) {
+            public FournisseurRow AddFournisseurRow(int idfour, string person_contact, string telephone, string email, string numcompte, string intitule, string code_swift, string banque, string nompays, string nomfour, int idpays) {
                 FournisseurRow rowFournisseurRow = ((FournisseurRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idfour,
@@ -439,7 +469,10 @@ namespace LogiS {
                         numcompte,
                         intitule,
                         code_swift,
-                        banque};
+                        banque,
+                        nompays,
+                        nomfour,
+                        idpays};
                 rowFournisseurRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFournisseurRow);
                 return rowFournisseurRow;
@@ -477,6 +510,9 @@ namespace LogiS {
                 this.columnintitule = base.Columns["intitule"];
                 this.columncode_swift = base.Columns["code_swift"];
                 this.columnbanque = base.Columns["banque"];
+                this.columnnompays = base.Columns["nompays"];
+                this.columnnomfour = base.Columns["nomfour"];
+                this.columnidpays = base.Columns["idpays"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -498,19 +534,29 @@ namespace LogiS {
                 base.Columns.Add(this.columncode_swift);
                 this.columnbanque = new global::System.Data.DataColumn("banque", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbanque);
+                this.columnnompays = new global::System.Data.DataColumn("nompays", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnompays);
+                this.columnnomfour = new global::System.Data.DataColumn("nomfour", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomfour);
+                this.columnidpays = new global::System.Data.DataColumn("idpays", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidpays);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidfour}, true));
                 this.columnidfour.AllowDBNull = false;
                 this.columnidfour.Unique = true;
                 this.columnperson_contact.AllowDBNull = false;
                 this.columnperson_contact.MaxLength = 100;
-                this.columntelephone.AllowDBNull = false;
                 this.columntelephone.MaxLength = 20;
                 this.columnemail.MaxLength = 100;
                 this.columnnumcompte.MaxLength = 100;
                 this.columnintitule.MaxLength = 100;
                 this.columncode_swift.MaxLength = 50;
                 this.columnbanque.MaxLength = 100;
+                this.columnnompays.AllowDBNull = false;
+                this.columnnompays.MaxLength = 50;
+                this.columnnomfour.AllowDBNull = false;
+                this.columnnomfour.MaxLength = 50;
+                this.columnidpays.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -677,7 +723,12 @@ namespace LogiS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string telephone {
                 get {
-                    return ((string)(this[this.tableFournisseur.telephoneColumn]));
+                    try {
+                        return ((string)(this[this.tableFournisseur.telephoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'telephone\' in table \'Fournisseur\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableFournisseur.telephoneColumn] = value;
@@ -762,6 +813,51 @@ namespace LogiS {
                 set {
                     this[this.tableFournisseur.banqueColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nompays {
+                get {
+                    return ((string)(this[this.tableFournisseur.nompaysColumn]));
+                }
+                set {
+                    this[this.tableFournisseur.nompaysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomfour {
+                get {
+                    return ((string)(this[this.tableFournisseur.nomfourColumn]));
+                }
+                set {
+                    this[this.tableFournisseur.nomfourColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idpays {
+                get {
+                    return ((int)(this[this.tableFournisseur.idpaysColumn]));
+                }
+                set {
+                    this[this.tableFournisseur.idpaysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstelephoneNull() {
+                return this.IsNull(this.tableFournisseur.telephoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettelephoneNull() {
+                this[this.tableFournisseur.telephoneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -992,6 +1088,9 @@ namespace LogiS.DataSetFourTableAdapters {
             tableMapping.ColumnMappings.Add("intitule", "intitule");
             tableMapping.ColumnMappings.Add("code_swift", "code_swift");
             tableMapping.ColumnMappings.Add("banque", "banque");
+            tableMapping.ColumnMappings.Add("nompays", "nompays");
+            tableMapping.ColumnMappings.Add("nomfour", "nomfour");
+            tableMapping.ColumnMappings.Add("idpays", "idpays");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1051,8 +1150,9 @@ SELECT idfour, person_contact, telephone, email, numcompte, intitule, code_swift
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idfour, person_contact, telephone, email, numcompte, intitule, code_swift," +
-                " banque FROM dbo.Fournisseur";
+            this._commandCollection[0].CommandText = "SELECT f.idfour, f.person_contact, f.telephone, f.email, f.numcompte, f.intitule," +
+                " f.code_swift, f.banque, p.nompays, f.nomfour, f.idpays\r\nFROM   Fournisseur AS f" +
+                " INNER JOIN\r\n             Pays AS p ON f.idpays = p.idpays";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

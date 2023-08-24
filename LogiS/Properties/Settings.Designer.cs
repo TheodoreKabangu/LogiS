@@ -26,8 +26,8 @@ namespace LogiS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=F:\\SoftwareDevelopment\\MesProjets\\Lo" +
-            "giS\\LogiSDB.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.254,4517;initial catalog=LogiSDB;user id=sa;password=maxi@2" +
+            "023")]
         public string constring {
             get {
                 return ((string)(this["constring"]));

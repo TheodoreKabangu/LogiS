@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MdiPrevision));
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnMessagerie = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAfficher = new System.Windows.Forms.Button();
             this.btnFacture = new System.Windows.Forms.Button();
             this.btnFourn = new System.Windows.Forms.Button();
             this.btnFournisseur = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             // 
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.pnlMenu.Controls.Add(this.btnMessagerie);
             this.pnlMenu.Controls.Add(this.panel2);
             this.pnlMenu.Controls.Add(this.btnFournisseur);
             this.pnlMenu.Controls.Add(this.btnOuvrir);
@@ -72,41 +73,38 @@
             this.pnlMenu.Size = new System.Drawing.Size(180, 513);
             this.pnlMenu.TabIndex = 184;
             // 
+            // btnMessagerie
+            // 
+            this.btnMessagerie.BackColor = System.Drawing.Color.Transparent;
+            this.btnMessagerie.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMessagerie.FlatAppearance.BorderSize = 0;
+            this.btnMessagerie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
+            this.btnMessagerie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMessagerie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessagerie.ForeColor = System.Drawing.Color.White;
+            this.btnMessagerie.Image = ((System.Drawing.Image)(resources.GetObject("btnMessagerie.Image")));
+            this.btnMessagerie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMessagerie.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnMessagerie.Location = new System.Drawing.Point(0, 288);
+            this.btnMessagerie.Name = "btnMessagerie";
+            this.btnMessagerie.Size = new System.Drawing.Size(180, 55);
+            this.btnMessagerie.TabIndex = 569;
+            this.btnMessagerie.Text = "Messagerie";
+            this.btnMessagerie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMessagerie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMessagerie.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.panel2.Controls.Add(this.btnAfficher);
             this.panel2.Controls.Add(this.btnFacture);
             this.panel2.Controls.Add(this.btnFourn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 192);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 204);
+            this.panel2.Size = new System.Drawing.Size(180, 96);
             this.panel2.TabIndex = 185;
-            // 
-            // btnAfficher
-            // 
-            this.btnAfficher.BackColor = System.Drawing.Color.Transparent;
-            this.btnAfficher.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAfficher.FlatAppearance.BorderSize = 0;
-            this.btnAfficher.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(150)))));
-            this.btnAfficher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAfficher.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAfficher.ForeColor = System.Drawing.Color.White;
-            this.btnAfficher.Image = ((System.Drawing.Image)(resources.GetObject("btnAfficher.Image")));
-            this.btnAfficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAfficher.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAfficher.Location = new System.Drawing.Point(0, 90);
-            this.btnAfficher.Name = "btnAfficher";
-            this.btnAfficher.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAfficher.Size = new System.Drawing.Size(180, 45);
-            this.btnAfficher.TabIndex = 564;
-            this.btnAfficher.Text = "Rapports";
-            this.btnAfficher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAfficher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAfficher.UseVisualStyleBackColor = false;
-            this.btnAfficher.Click += new System.EventHandler(this.btnAfficher_Click);
             // 
             // btnFacture
             // 
@@ -283,8 +281,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnFacture;
-        public System.Windows.Forms.Button btnAfficher;
         public System.Windows.Forms.Button btnFourn;
+        public System.Windows.Forms.Button btnMessagerie;
 
     }
 }

@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
-using System.Configuration;
 using System.Drawing;
+using System.Data.SqlClient;
 
 namespace LogiS
 {
@@ -16,12 +14,7 @@ namespace LogiS
         #region Attributs
         private int idproduit;
         #endregion
-        static string conString = ConfigurationManager.ConnectionStrings["LogiS.Properties.Settings.constring"].ConnectionString;
-        SqlConnection con = new SqlConnection(conString);
-        SqlCommand cmd;
-        SqlDataAdapter da;
-        SqlDataReader dr;
-        DataTable dt = new DataTable();
+        
         #region Opérations
         public void Annuler(FormProduit p)
         {
@@ -32,6 +25,9 @@ namespace LogiS
             p.cboUnite.SelectedText = "";
             p.cboUnite.DropDownStyle = ComboBoxStyle.DropDownList;
             p.dgvProduit.DataSource = null;
+            p.btnModifier.Enabled = false;
+            p.btnSupprimer.Enabled = false;
+            p.btnAjouter.Enabled = true;
             p.txtProduit.Focus();
         }
         public void TestValeurFloat(TextBox txt)
@@ -69,7 +65,7 @@ namespace LogiS
                 SqlTransaction tx = con.BeginTransaction();
                 try
                 {
-                    cmd = new SqlCommand("INSERT INTO Produit VALUES (@id, @nomproduit, @nomcommercial, @unite)", con);
+                    cmd = new SqlCommand("INSERT INTO Produit VALUES (@id, @nomproduit, @nomcommercial, @unite, @poids, @volume)", con);
                     cmd.Parameters.AddWithValue("@id", idproduit);
                     cmd.Parameters.AddWithValue("@nomproduit", p.txtProduit.Text);
                     cmd.Parameters.AddWithValue("@nomcommercial", p.txtNomCom.Text);
@@ -106,6 +102,7 @@ namespace LogiS
                 p.cboUnite.DropDownStyle = ComboBoxStyle.DropDownList;
                 p.btnModifier.Enabled = true;
                 p.btnSupprimer.Enabled = true;
+                p.btnAjouter.Enabled = false;
             }
         }
         public void Modifier(FormProduit p)
@@ -116,11 +113,13 @@ namespace LogiS
                 SqlTransaction tx = con.BeginTransaction();
                 try
                 {
-                    cmd = new SqlCommand("UPDATE Produit SET nomproduit = @nomproduit, nomcommercial = @nomcommercial, unite = @unite WHERE idproduit = @id", con);
+                    cmd = new SqlCommand("UPDATE Produit SET nomproduit = @nomproduit, nomcommercial = @nomcommercial, unite = @unite, poids = @poids, volume = @volume WHERE idproduit = @id", con);
                     cmd.Parameters.AddWithValue("@id", idproduit);
                     cmd.Parameters.AddWithValue("@nomproduit", p.txtProduit.Text);
                     cmd.Parameters.AddWithValue("@nomcommercial", p.txtNomCom.Text);
                     cmd.Parameters.AddWithValue("@unite", p.cboUnite.Text);
+                    cmd.Parameters.AddWithValue("@poids", Convert.ToDouble(p.txtPoids.Text));
+                    cmd.Parameters.AddWithValue("@volume", Convert.ToDouble(p.txtVolume.Text));
                     cmd.Transaction = tx;
                     cmd.ExecuteNonQuery();
                     tx.Commit();
@@ -133,6 +132,7 @@ namespace LogiS
                 }
                 con.Close();
                 Annuler(p);
+                Afficher(p.txtProduit, p.dgvProduit);
             }
             else
             {
@@ -161,25 +161,26 @@ namespace LogiS
                 }
                 con.Close();
                 Annuler(p);
+                Afficher(p.txtProduit, p.dgvProduit);
             }
             else
-                MessageBox.Show("Désolé! Ce pays ne peut être supprimé car il est impliqué dans les prévisions", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Désolé! Ce produit ne peut être supprimé car il est impliqué dans certaines opérations dans le système", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         public void NouvelleUnite(FormProduit p)
         {
             FormProduitUnite u = new FormProduitUnite();
             for (int i = 0; i < p.cboUnite.Items.Count; i++)
             {
-                u.dgvProduit.Rows.Add();
-                u.dgvProduit.Rows[i].Cells[0].Value = p.cboUnite.Items[i];
+                u.dgvUnite.Rows.Add();
+                u.dgvUnite.Rows[i].Cells[0].Value = p.cboUnite.Items[i];
             }
             u.ShowDialog();
             if(u.succes)
             {
                 p.cboUnite.Items.Clear();
-                for (int i = 0; i < u.dgvProduit.RowCount; i++)
+                for (int i = 0; i < u.dgvUnite.RowCount; i++)
                 {
-                    p.cboUnite.Items.Add(u.dgvProduit.Rows[i].Cells[0].Value.ToString());
+                    p.cboUnite.Items.Add(u.dgvUnite.Rows[i].Cells[0].Value.ToString());
                 }
             }
             u.Close();

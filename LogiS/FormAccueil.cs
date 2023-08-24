@@ -16,6 +16,8 @@ namespace LogiS
         {
             InitializeComponent();
         }
+        ClassConnexion c = new ClassConnexion();
+        FormConnexion cn = new FormConnexion();
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -23,7 +25,53 @@ namespace LogiS
 
         private void btnPrevision_Click(object sender, EventArgs e)
         {
-            new MdiPrevision().Show();
+            cn.poste = "manager";
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnTresorerie_Click(object sender, EventArgs e)
+        {
+            cn.poste = "tresorerie";
+            c.ChargerCombo(cn);
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnFacturation_Click(object sender, EventArgs e)
+        {
+            cn.poste = "factura";
+            c.ChargerCombo(cn);
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            cn.poste = "stock";
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnColis_Click(object sender, EventArgs e)
+        {
+            cn.poste = "colis";
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            cn.poste = "admin";
+            cn.Show();
+            this.Hide();
+        }
+
+        private void btnDepot_Click(object sender, EventArgs e)
+        {
+            cn.poste = "depot";
+            c.ChargerCombo(cn);
+            cn.Show();
             this.Hide();
         }
     }

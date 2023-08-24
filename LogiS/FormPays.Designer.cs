@@ -69,7 +69,7 @@
             this.btnModifier.Location = new System.Drawing.Point(203, 118);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(30, 23);
+            this.btnModifier.Size = new System.Drawing.Size(30, 30);
             this.btnModifier.TabIndex = 805;
             this.toolTip1.SetToolTip(this.btnModifier, "Modifier");
             this.btnModifier.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             this.btnAjouter.Location = new System.Drawing.Point(161, 118);
             this.btnAjouter.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(30, 23);
+            this.btnAjouter.Size = new System.Drawing.Size(30, 30);
             this.btnAjouter.TabIndex = 806;
             this.toolTip1.SetToolTip(this.btnAjouter, "Enregistrer");
             this.btnAjouter.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(119, 118);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(30, 23);
+            this.btnAnnuler.Size = new System.Drawing.Size(30, 30);
             this.btnAnnuler.TabIndex = 807;
             this.toolTip1.SetToolTip(this.btnAnnuler, "Annuler");
             this.btnAnnuler.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@
             this.btnSupprimer.Location = new System.Drawing.Point(245, 118);
             this.btnSupprimer.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(30, 23);
+            this.btnSupprimer.Size = new System.Drawing.Size(30, 30);
             this.btnSupprimer.TabIndex = 808;
             this.toolTip1.SetToolTip(this.btnSupprimer, "Supprimer");
             this.btnSupprimer.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             this.btnAfficher.Location = new System.Drawing.Point(287, 118);
             this.btnAfficher.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAfficher.Name = "btnAfficher";
-            this.btnAfficher.Size = new System.Drawing.Size(30, 23);
+            this.btnAfficher.Size = new System.Drawing.Size(30, 30);
             this.btnAfficher.TabIndex = 809;
             this.toolTip1.SetToolTip(this.btnAfficher, "Afficher");
             this.btnAfficher.UseVisualStyleBackColor = false;
@@ -187,14 +187,14 @@
             this.dgvPays.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPays.EnableHeadersVisualStyles = false;
             this.dgvPays.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.dgvPays.Location = new System.Drawing.Point(12, 149);
+            this.dgvPays.Location = new System.Drawing.Point(12, 156);
             this.dgvPays.MultiSelect = false;
             this.dgvPays.Name = "dgvPays";
             this.dgvPays.ReadOnly = true;
             this.dgvPays.RowHeadersVisible = false;
             this.dgvPays.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPays.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPays.Size = new System.Drawing.Size(493, 290);
+            this.dgvPays.Size = new System.Drawing.Size(493, 283);
             this.dgvPays.TabIndex = 804;
             this.dgvPays.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPays_CellClick);
             // 
@@ -238,9 +238,9 @@
             // 
             this.txtMonnaie.Location = new System.Drawing.Point(119, 80);
             this.txtMonnaie.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txtMonnaie.MaxLength = 75;
+            this.txtMonnaie.MaxLength = 5;
             this.txtMonnaie.Name = "txtMonnaie";
-            this.txtMonnaie.Size = new System.Drawing.Size(329, 28);
+            this.txtMonnaie.Size = new System.Drawing.Size(386, 28);
             this.txtMonnaie.TabIndex = 800;
             // 
             // label1
@@ -258,9 +258,9 @@
             // 
             this.txtPays.Location = new System.Drawing.Point(119, 51);
             this.txtPays.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txtPays.MaxLength = 75;
+            this.txtPays.MaxLength = 50;
             this.txtPays.Name = "txtPays";
-            this.txtPays.Size = new System.Drawing.Size(329, 28);
+            this.txtPays.Size = new System.Drawing.Size(386, 28);
             this.txtPays.TabIndex = 799;
             // 
             // label2
@@ -307,6 +307,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(539, 507);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(539, 507);
             this.Name = "FormPays";

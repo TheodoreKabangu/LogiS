@@ -32,25 +32,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduitUnite));
-            this.dgvProduit = new System.Windows.Forms.DataGridView();
+            this.dgvUnite = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUnite = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnite)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvProduit
+            // dgvUnite
             // 
-            this.dgvProduit.AllowUserToAddRows = false;
-            this.dgvProduit.AllowUserToDeleteRows = false;
-            this.dgvProduit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvUnite.AllowUserToAddRows = false;
+            this.dgvUnite.AllowUserToDeleteRows = false;
+            this.dgvUnite.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvProduit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProduit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvUnite.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvUnite.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUnite.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,9 +58,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUnite.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUnite.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUnite.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -69,18 +69,26 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduit.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProduit.EnableHeadersVisualStyles = false;
-            this.dgvProduit.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.dgvProduit.Location = new System.Drawing.Point(12, 12);
-            this.dgvProduit.MultiSelect = false;
-            this.dgvProduit.Name = "dgvProduit";
-            this.dgvProduit.ReadOnly = true;
-            this.dgvProduit.RowHeadersVisible = false;
-            this.dgvProduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvProduit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduit.Size = new System.Drawing.Size(285, 206);
-            this.dgvProduit.TabIndex = 794;
+            this.dgvUnite.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUnite.EnableHeadersVisualStyles = false;
+            this.dgvUnite.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.dgvUnite.Location = new System.Drawing.Point(12, 12);
+            this.dgvUnite.MultiSelect = false;
+            this.dgvUnite.Name = "dgvUnite";
+            this.dgvUnite.ReadOnly = true;
+            this.dgvUnite.RowHeadersVisible = false;
+            this.dgvUnite.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvUnite.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUnite.Size = new System.Drawing.Size(285, 206);
+            this.dgvUnite.TabIndex = 794;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Unité";
+            this.Column1.MinimumWidth = 100;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // txtUnite
             // 
@@ -120,15 +128,7 @@
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Unité";
-            this.Column1.MinimumWidth = 100;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // FormUniteProduit
+            // FormProduitUnite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,16 +137,18 @@
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.txtUnite);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvProduit);
+            this.Controls.Add(this.dgvUnite);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(331, 324);
             this.MinimizeBox = false;
-            this.Name = "FormUniteProduit";
+            this.MinimumSize = new System.Drawing.Size(331, 324);
+            this.Name = "FormProduitUnite";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Unité - Logis";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +156,7 @@
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dgvProduit;
+        public System.Windows.Forms.DataGridView dgvUnite;
         public System.Windows.Forms.TextBox txtUnite;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnAjouter;

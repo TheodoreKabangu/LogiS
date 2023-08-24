@@ -32,8 +32,9 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnPrevision = new System.Windows.Forms.Button();
-            this.btnInscription = new System.Windows.Forms.Button();
-            this.btnCompta = new System.Windows.Forms.Button();
+            this.btnDepot = new System.Windows.Forms.Button();
+            this.btnColis = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.btnTresorerie = new System.Windows.Forms.Button();
             this.btnFacturation = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,8 +51,9 @@
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.Controls.Add(this.btnAdmin);
             this.pnlMenu.Controls.Add(this.btnPrevision);
-            this.pnlMenu.Controls.Add(this.btnInscription);
-            this.pnlMenu.Controls.Add(this.btnCompta);
+            this.pnlMenu.Controls.Add(this.btnDepot);
+            this.pnlMenu.Controls.Add(this.btnColis);
+            this.pnlMenu.Controls.Add(this.btnStock);
             this.pnlMenu.Controls.Add(this.btnTresorerie);
             this.pnlMenu.Controls.Add(this.btnFacturation);
             this.pnlMenu.Location = new System.Drawing.Point(57, 116);
@@ -72,14 +74,15 @@
             this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 275);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 330);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(259, 55);
+            this.btnAdmin.Size = new System.Drawing.Size(233, 55);
             this.btnAdmin.TabIndex = 564;
             this.btnAdmin.Text = "Admnistration système";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnPrevision
             // 
@@ -94,9 +97,9 @@
             this.btnPrevision.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevision.Image")));
             this.btnPrevision.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrevision.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnPrevision.Location = new System.Drawing.Point(0, 220);
+            this.btnPrevision.Location = new System.Drawing.Point(0, 275);
             this.btnPrevision.Name = "btnPrevision";
-            this.btnPrevision.Size = new System.Drawing.Size(259, 55);
+            this.btnPrevision.Size = new System.Drawing.Size(233, 55);
             this.btnPrevision.TabIndex = 563;
             this.btnPrevision.Text = "Prévisions";
             this.btnPrevision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,49 +107,74 @@
             this.btnPrevision.UseVisualStyleBackColor = false;
             this.btnPrevision.Click += new System.EventHandler(this.btnPrevision_Click);
             // 
-            // btnInscription
+            // btnDepot
             // 
-            this.btnInscription.BackColor = System.Drawing.Color.Transparent;
-            this.btnInscription.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInscription.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.btnInscription.FlatAppearance.BorderSize = 0;
-            this.btnInscription.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
-            this.btnInscription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscription.ForeColor = System.Drawing.Color.Black;
-            this.btnInscription.Image = ((System.Drawing.Image)(resources.GetObject("btnInscription.Image")));
-            this.btnInscription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscription.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInscription.Location = new System.Drawing.Point(0, 165);
-            this.btnInscription.Name = "btnInscription";
-            this.btnInscription.Size = new System.Drawing.Size(259, 55);
-            this.btnInscription.TabIndex = 562;
-            this.btnInscription.Text = "Gestion des stocks";
-            this.btnInscription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInscription.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInscription.UseVisualStyleBackColor = false;
+            this.btnDepot.BackColor = System.Drawing.Color.Transparent;
+            this.btnDepot.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDepot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.btnDepot.FlatAppearance.BorderSize = 0;
+            this.btnDepot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
+            this.btnDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepot.ForeColor = System.Drawing.Color.Black;
+            this.btnDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnDepot.Image")));
+            this.btnDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepot.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnDepot.Location = new System.Drawing.Point(0, 220);
+            this.btnDepot.Name = "btnDepot";
+            this.btnDepot.Size = new System.Drawing.Size(233, 55);
+            this.btnDepot.TabIndex = 565;
+            this.btnDepot.Text = "Dépôts des stocks";
+            this.btnDepot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepot.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDepot.UseVisualStyleBackColor = false;
+            this.btnDepot.Click += new System.EventHandler(this.btnDepot_Click);
             // 
-            // btnCompta
+            // btnColis
             // 
-            this.btnCompta.BackColor = System.Drawing.Color.Transparent;
-            this.btnCompta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.btnCompta.FlatAppearance.BorderSize = 0;
-            this.btnCompta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
-            this.btnCompta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompta.ForeColor = System.Drawing.Color.Black;
-            this.btnCompta.Image = ((System.Drawing.Image)(resources.GetObject("btnCompta.Image")));
-            this.btnCompta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompta.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCompta.Location = new System.Drawing.Point(0, 110);
-            this.btnCompta.Name = "btnCompta";
-            this.btnCompta.Size = new System.Drawing.Size(259, 55);
-            this.btnCompta.TabIndex = 559;
-            this.btnCompta.Text = "Gestion des colis";
-            this.btnCompta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCompta.UseVisualStyleBackColor = false;
+            this.btnColis.BackColor = System.Drawing.Color.Transparent;
+            this.btnColis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnColis.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.btnColis.FlatAppearance.BorderSize = 0;
+            this.btnColis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
+            this.btnColis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColis.ForeColor = System.Drawing.Color.Black;
+            this.btnColis.Image = ((System.Drawing.Image)(resources.GetObject("btnColis.Image")));
+            this.btnColis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnColis.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnColis.Location = new System.Drawing.Point(0, 165);
+            this.btnColis.Name = "btnColis";
+            this.btnColis.Size = new System.Drawing.Size(233, 55);
+            this.btnColis.TabIndex = 559;
+            this.btnColis.Text = "Gestion des colis";
+            this.btnColis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnColis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnColis.UseVisualStyleBackColor = false;
+            this.btnColis.Click += new System.EventHandler(this.btnColis_Click);
+            // 
+            // btnStock
+            // 
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.Black;
+            this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
+            this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnStock.Location = new System.Drawing.Point(0, 110);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(233, 55);
+            this.btnStock.TabIndex = 562;
+            this.btnStock.Text = "Gestion de stocks";
+            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnTresorerie
             // 
@@ -163,12 +191,13 @@
             this.btnTresorerie.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnTresorerie.Location = new System.Drawing.Point(0, 55);
             this.btnTresorerie.Name = "btnTresorerie";
-            this.btnTresorerie.Size = new System.Drawing.Size(259, 55);
+            this.btnTresorerie.Size = new System.Drawing.Size(233, 55);
             this.btnTresorerie.TabIndex = 555;
             this.btnTresorerie.Text = "Trésorerie";
             this.btnTresorerie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTresorerie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTresorerie.UseVisualStyleBackColor = false;
+            this.btnTresorerie.Click += new System.EventHandler(this.btnTresorerie_Click);
             // 
             // btnFacturation
             // 
@@ -185,12 +214,13 @@
             this.btnFacturation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnFacturation.Location = new System.Drawing.Point(0, 0);
             this.btnFacturation.Name = "btnFacturation";
-            this.btnFacturation.Size = new System.Drawing.Size(259, 55);
+            this.btnFacturation.Size = new System.Drawing.Size(233, 55);
             this.btnFacturation.TabIndex = 557;
             this.btnFacturation.Text = "Facturation";
             this.btnFacturation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFacturation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFacturation.UseVisualStyleBackColor = false;
+            this.btnFacturation.Click += new System.EventHandler(this.btnFacturation_Click);
             // 
             // panel2
             // 
@@ -226,7 +256,7 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 24F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(96)))));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(0, 50);
             this.label10.Name = "label10";
@@ -272,14 +302,15 @@
         private System.Windows.Forms.Panel pnlMenu;
         public System.Windows.Forms.Button btnAdmin;
         public System.Windows.Forms.Button btnPrevision;
-        public System.Windows.Forms.Button btnInscription;
-        public System.Windows.Forms.Button btnCompta;
+        public System.Windows.Forms.Button btnStock;
+        public System.Windows.Forms.Button btnColis;
         private System.Windows.Forms.Button btnTresorerie;
         public System.Windows.Forms.Button btnFacturation;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnDepot;
     }
 }
 

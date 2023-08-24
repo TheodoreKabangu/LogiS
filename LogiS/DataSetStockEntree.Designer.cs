@@ -20,17 +20,17 @@ namespace LogiS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetFacture")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetStockEntree")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetFacture : global::System.Data.DataSet {
+    public partial class DataSetStockEntree : global::System.Data.DataSet {
         
-        private FactureDataTable tableFacture;
+        private StockEntreeDataTable tableStockEntree;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSetFacture() {
+        public DataSetStockEntree() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace LogiS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSetFacture(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetStockEntree(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace LogiS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Facture"] != null)) {
-                    base.Tables.Add(new FactureDataTable(ds.Tables["Facture"]));
+                if ((ds.Tables["StockEntree"] != null)) {
+                    base.Tables.Add(new StockEntreeDataTable(ds.Tables["StockEntree"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace LogiS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FactureDataTable Facture {
+        public StockEntreeDataTable StockEntree {
             get {
-                return this.tableFacture;
+                return this.tableStockEntree;
             }
         }
         
@@ -127,7 +127,7 @@ namespace LogiS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetFacture cln = ((DataSetFacture)(base.Clone()));
+            DataSetStockEntree cln = ((DataSetStockEntree)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace LogiS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Facture"] != null)) {
-                    base.Tables.Add(new FactureDataTable(ds.Tables["Facture"]));
+                if ((ds.Tables["StockEntree"] != null)) {
+                    base.Tables.Add(new StockEntreeDataTable(ds.Tables["StockEntree"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace LogiS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFacture = ((FactureDataTable)(base.Tables["Facture"]));
+            this.tableStockEntree = ((StockEntreeDataTable)(base.Tables["StockEntree"]));
             if ((initTable == true)) {
-                if ((this.tableFacture != null)) {
-                    this.tableFacture.InitVars();
+                if ((this.tableStockEntree != null)) {
+                    this.tableStockEntree.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace LogiS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetFacture";
+            this.DataSetName = "DataSetStockEntree";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetFacture.xsd";
+            this.Namespace = "http://tempuri.org/DataSetStockEntree.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFacture = new FactureDataTable();
-            base.Tables.Add(this.tableFacture);
+            this.tableStockEntree = new StockEntreeDataTable();
+            base.Tables.Add(this.tableStockEntree);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeFacture() {
+        private bool ShouldSerializeStockEntree() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace LogiS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetFacture ds = new DataSetFacture();
+            DataSetStockEntree ds = new DataSetStockEntree();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,37 @@ namespace LogiS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void FactureRowChangeEventHandler(object sender, FactureRowChangeEvent e);
+        public delegate void StockEntreeRowChangeEventHandler(object sender, StockEntreeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FactureDataTable : global::System.Data.TypedTableBase<FactureRow> {
+        public partial class StockEntreeDataTable : global::System.Data.TypedTableBase<StockEntreeRow> {
             
-            private global::System.Data.DataColumn columnidfacture;
+            private global::System.Data.DataColumn columnidentree;
             
-            private global::System.Data.DataColumn columndate_facture;
+            private global::System.Data.DataColumn columndate_jour;
             
-            private global::System.Data.DataColumn columndate_terme;
+            private global::System.Data.DataColumn columnqteajoute;
             
-            private global::System.Data.DataColumn columnmontant;
+            private global::System.Data.DataColumn columnnomcommercial;
             
-            private global::System.Data.DataColumn columnavance;
+            private global::System.Data.DataColumn columnunite;
             
-            private global::System.Data.DataColumn columnremise;
+            private global::System.Data.DataColumn columnnumlot;
             
-            private global::System.Data.DataColumn columnnomfichier;
+            private global::System.Data.DataColumn columnexpiration;
             
-            private global::System.Data.DataColumn columnextfichier;
+            private global::System.Data.DataColumn columnnomdepot;
+            
+            private global::System.Data.DataColumn columnlibelle;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureDataTable() {
-                this.TableName = "Facture";
+            public StockEntreeDataTable() {
+                this.TableName = "StockEntree";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +308,7 @@ namespace LogiS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FactureDataTable(global::System.Data.DataTable table) {
+            internal StockEntreeDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,72 +325,80 @@ namespace LogiS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected FactureDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected StockEntreeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idfactureColumn {
+            public global::System.Data.DataColumn identreeColumn {
                 get {
-                    return this.columnidfacture;
+                    return this.columnidentree;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn date_factureColumn {
+            public global::System.Data.DataColumn date_jourColumn {
                 get {
-                    return this.columndate_facture;
+                    return this.columndate_jour;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn date_termeColumn {
+            public global::System.Data.DataColumn qteajouteColumn {
                 get {
-                    return this.columndate_terme;
+                    return this.columnqteajoute;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn montantColumn {
+            public global::System.Data.DataColumn nomcommercialColumn {
                 get {
-                    return this.columnmontant;
+                    return this.columnnomcommercial;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn avanceColumn {
+            public global::System.Data.DataColumn uniteColumn {
                 get {
-                    return this.columnavance;
+                    return this.columnunite;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn remiseColumn {
+            public global::System.Data.DataColumn numlotColumn {
                 get {
-                    return this.columnremise;
+                    return this.columnnumlot;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nomfichierColumn {
+            public global::System.Data.DataColumn expirationColumn {
                 get {
-                    return this.columnnomfichier;
+                    return this.columnexpiration;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn extfichierColumn {
+            public global::System.Data.DataColumn nomdepotColumn {
                 get {
-                    return this.columnextfichier;
+                    return this.columnnomdepot;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn libelleColumn {
+                get {
+                    return this.columnlibelle;
                 }
             }
             
@@ -403,59 +413,60 @@ namespace LogiS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRow this[int index] {
+            public StockEntreeRow this[int index] {
                 get {
-                    return ((FactureRow)(this.Rows[index]));
+                    return ((StockEntreeRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FactureRowChangeEventHandler FactureRowChanging;
+            public event StockEntreeRowChangeEventHandler StockEntreeRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FactureRowChangeEventHandler FactureRowChanged;
+            public event StockEntreeRowChangeEventHandler StockEntreeRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FactureRowChangeEventHandler FactureRowDeleting;
+            public event StockEntreeRowChangeEventHandler StockEntreeRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FactureRowChangeEventHandler FactureRowDeleted;
+            public event StockEntreeRowChangeEventHandler StockEntreeRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddFactureRow(FactureRow row) {
+            public void AddStockEntreeRow(StockEntreeRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRow AddFactureRow(int idfacture, System.DateTime date_facture, System.DateTime date_terme, decimal montant, decimal avance, decimal remise, string nomfichier, string extfichier) {
-                FactureRow rowFactureRow = ((FactureRow)(this.NewRow()));
+            public StockEntreeRow AddStockEntreeRow(int identree, System.DateTime date_jour, int qteajoute, string nomcommercial, string unite, string numlot, string expiration, string nomdepot, string libelle) {
+                StockEntreeRow rowStockEntreeRow = ((StockEntreeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idfacture,
-                        date_facture,
-                        date_terme,
-                        montant,
-                        avance,
-                        remise,
-                        nomfichier,
-                        extfichier};
-                rowFactureRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFactureRow);
-                return rowFactureRow;
+                        identree,
+                        date_jour,
+                        qteajoute,
+                        nomcommercial,
+                        unite,
+                        numlot,
+                        expiration,
+                        nomdepot,
+                        libelle};
+                rowStockEntreeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowStockEntreeRow);
+                return rowStockEntreeRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRow FindByidfacture(int idfacture) {
-                return ((FactureRow)(this.Rows.Find(new object[] {
-                            idfacture})));
+            public StockEntreeRow FindByidentree(int identree) {
+                return ((StockEntreeRow)(this.Rows.Find(new object[] {
+                            identree})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FactureDataTable cln = ((FactureDataTable)(base.Clone()));
+                StockEntreeDataTable cln = ((StockEntreeDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,80 +474,86 @@ namespace LogiS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FactureDataTable();
+                return new StockEntreeDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnidfacture = base.Columns["idfacture"];
-                this.columndate_facture = base.Columns["date_facture"];
-                this.columndate_terme = base.Columns["date_terme"];
-                this.columnmontant = base.Columns["montant"];
-                this.columnavance = base.Columns["avance"];
-                this.columnremise = base.Columns["remise"];
-                this.columnnomfichier = base.Columns["nomfichier"];
-                this.columnextfichier = base.Columns["extfichier"];
+                this.columnidentree = base.Columns["identree"];
+                this.columndate_jour = base.Columns["date_jour"];
+                this.columnqteajoute = base.Columns["qteajoute"];
+                this.columnnomcommercial = base.Columns["nomcommercial"];
+                this.columnunite = base.Columns["unite"];
+                this.columnnumlot = base.Columns["numlot"];
+                this.columnexpiration = base.Columns["expiration"];
+                this.columnnomdepot = base.Columns["nomdepot"];
+                this.columnlibelle = base.Columns["libelle"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnidfacture = new global::System.Data.DataColumn("idfacture", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidfacture);
-                this.columndate_facture = new global::System.Data.DataColumn("date_facture", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate_facture);
-                this.columndate_terme = new global::System.Data.DataColumn("date_terme", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate_terme);
-                this.columnmontant = new global::System.Data.DataColumn("montant", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmontant);
-                this.columnavance = new global::System.Data.DataColumn("avance", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnavance);
-                this.columnremise = new global::System.Data.DataColumn("remise", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnremise);
-                this.columnnomfichier = new global::System.Data.DataColumn("nomfichier", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnomfichier);
-                this.columnextfichier = new global::System.Data.DataColumn("extfichier", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnextfichier);
+                this.columnidentree = new global::System.Data.DataColumn("identree", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidentree);
+                this.columndate_jour = new global::System.Data.DataColumn("date_jour", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_jour);
+                this.columnqteajoute = new global::System.Data.DataColumn("qteajoute", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnqteajoute);
+                this.columnnomcommercial = new global::System.Data.DataColumn("nomcommercial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomcommercial);
+                this.columnunite = new global::System.Data.DataColumn("unite", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnunite);
+                this.columnnumlot = new global::System.Data.DataColumn("numlot", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumlot);
+                this.columnexpiration = new global::System.Data.DataColumn("expiration", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpiration);
+                this.columnnomdepot = new global::System.Data.DataColumn("nomdepot", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomdepot);
+                this.columnlibelle = new global::System.Data.DataColumn("libelle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlibelle);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidfacture}, true));
-                this.columnidfacture.AllowDBNull = false;
-                this.columnidfacture.Unique = true;
-                this.columndate_facture.AllowDBNull = false;
-                this.columndate_terme.AllowDBNull = false;
-                this.columnmontant.AllowDBNull = false;
-                this.columnavance.AllowDBNull = false;
-                this.columnremise.AllowDBNull = false;
-                this.columnnomfichier.AllowDBNull = false;
-                this.columnnomfichier.MaxLength = 100;
-                this.columnextfichier.AllowDBNull = false;
-                this.columnextfichier.MaxLength = 10;
+                                this.columnidentree}, true));
+                this.columnidentree.AllowDBNull = false;
+                this.columnidentree.Unique = true;
+                this.columndate_jour.AllowDBNull = false;
+                this.columnqteajoute.AllowDBNull = false;
+                this.columnnomcommercial.AllowDBNull = false;
+                this.columnnomcommercial.MaxLength = 50;
+                this.columnunite.AllowDBNull = false;
+                this.columnunite.MaxLength = 30;
+                this.columnnumlot.MaxLength = 20;
+                this.columnexpiration.MaxLength = 10;
+                this.columnnomdepot.AllowDBNull = false;
+                this.columnnomdepot.MaxLength = 50;
+                this.columnlibelle.AllowDBNull = false;
+                this.columnlibelle.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRow NewFactureRow() {
-                return ((FactureRow)(this.NewRow()));
+            public StockEntreeRow NewStockEntreeRow() {
+                return ((StockEntreeRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FactureRow(builder);
+                return new StockEntreeRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FactureRow);
+                return typeof(StockEntreeRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FactureRowChanged != null)) {
-                    this.FactureRowChanged(this, new FactureRowChangeEvent(((FactureRow)(e.Row)), e.Action));
+                if ((this.StockEntreeRowChanged != null)) {
+                    this.StockEntreeRowChanged(this, new StockEntreeRowChangeEvent(((StockEntreeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -544,8 +561,8 @@ namespace LogiS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FactureRowChanging != null)) {
-                    this.FactureRowChanging(this, new FactureRowChangeEvent(((FactureRow)(e.Row)), e.Action));
+                if ((this.StockEntreeRowChanging != null)) {
+                    this.StockEntreeRowChanging(this, new StockEntreeRowChangeEvent(((StockEntreeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -553,8 +570,8 @@ namespace LogiS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FactureRowDeleted != null)) {
-                    this.FactureRowDeleted(this, new FactureRowChangeEvent(((FactureRow)(e.Row)), e.Action));
+                if ((this.StockEntreeRowDeleted != null)) {
+                    this.StockEntreeRowDeleted(this, new StockEntreeRowChangeEvent(((StockEntreeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -562,14 +579,14 @@ namespace LogiS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FactureRowDeleting != null)) {
-                    this.FactureRowDeleting(this, new FactureRowChangeEvent(((FactureRow)(e.Row)), e.Action));
+                if ((this.StockEntreeRowDeleting != null)) {
+                    this.StockEntreeRowDeleting(this, new StockEntreeRowChangeEvent(((StockEntreeRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveFactureRow(FactureRow row) {
+            public void RemoveStockEntreeRow(StockEntreeRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -578,7 +595,7 @@ namespace LogiS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetFacture ds = new DataSetFacture();
+                DataSetStockEntree ds = new DataSetStockEntree();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -596,7 +613,7 @@ namespace LogiS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FactureDataTable";
+                attribute2.FixedValue = "StockEntreeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -640,103 +657,148 @@ namespace LogiS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FactureRow : global::System.Data.DataRow {
+        public partial class StockEntreeRow : global::System.Data.DataRow {
             
-            private FactureDataTable tableFacture;
+            private StockEntreeDataTable tableStockEntree;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FactureRow(global::System.Data.DataRowBuilder rb) : 
+            internal StockEntreeRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFacture = ((FactureDataTable)(this.Table));
+                this.tableStockEntree = ((StockEntreeDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idfacture {
+            public int identree {
                 get {
-                    return ((int)(this[this.tableFacture.idfactureColumn]));
+                    return ((int)(this[this.tableStockEntree.identreeColumn]));
                 }
                 set {
-                    this[this.tableFacture.idfactureColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_facture {
-                get {
-                    return ((global::System.DateTime)(this[this.tableFacture.date_factureColumn]));
-                }
-                set {
-                    this[this.tableFacture.date_factureColumn] = value;
+                    this[this.tableStockEntree.identreeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_terme {
+            public System.DateTime date_jour {
                 get {
-                    return ((global::System.DateTime)(this[this.tableFacture.date_termeColumn]));
+                    return ((global::System.DateTime)(this[this.tableStockEntree.date_jourColumn]));
                 }
                 set {
-                    this[this.tableFacture.date_termeColumn] = value;
+                    this[this.tableStockEntree.date_jourColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal montant {
+            public int qteajoute {
                 get {
-                    return ((decimal)(this[this.tableFacture.montantColumn]));
+                    return ((int)(this[this.tableStockEntree.qteajouteColumn]));
                 }
                 set {
-                    this[this.tableFacture.montantColumn] = value;
+                    this[this.tableStockEntree.qteajouteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal avance {
+            public string nomcommercial {
                 get {
-                    return ((decimal)(this[this.tableFacture.avanceColumn]));
+                    return ((string)(this[this.tableStockEntree.nomcommercialColumn]));
                 }
                 set {
-                    this[this.tableFacture.avanceColumn] = value;
+                    this[this.tableStockEntree.nomcommercialColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal remise {
+            public string unite {
                 get {
-                    return ((decimal)(this[this.tableFacture.remiseColumn]));
+                    return ((string)(this[this.tableStockEntree.uniteColumn]));
                 }
                 set {
-                    this[this.tableFacture.remiseColumn] = value;
+                    this[this.tableStockEntree.uniteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nomfichier {
+            public string numlot {
                 get {
-                    return ((string)(this[this.tableFacture.nomfichierColumn]));
+                    try {
+                        return ((string)(this[this.tableStockEntree.numlotColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'numlot\' in table \'StockEntree\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFacture.nomfichierColumn] = value;
+                    this[this.tableStockEntree.numlotColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string extfichier {
+            public string expiration {
                 get {
-                    return ((string)(this[this.tableFacture.extfichierColumn]));
+                    try {
+                        return ((string)(this[this.tableStockEntree.expirationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'expiration\' in table \'StockEntree\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFacture.extfichierColumn] = value;
+                    this[this.tableStockEntree.expirationColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomdepot {
+                get {
+                    return ((string)(this[this.tableStockEntree.nomdepotColumn]));
+                }
+                set {
+                    this[this.tableStockEntree.nomdepotColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string libelle {
+                get {
+                    return ((string)(this[this.tableStockEntree.libelleColumn]));
+                }
+                set {
+                    this[this.tableStockEntree.libelleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnumlotNull() {
+                return this.IsNull(this.tableStockEntree.numlotColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnumlotNull() {
+                this[this.tableStockEntree.numlotColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsexpirationNull() {
+                return this.IsNull(this.tableStockEntree.expirationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetexpirationNull() {
+                this[this.tableStockEntree.expirationColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -744,22 +806,22 @@ namespace LogiS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class FactureRowChangeEvent : global::System.EventArgs {
+        public class StockEntreeRowChangeEvent : global::System.EventArgs {
             
-            private FactureRow eventRow;
+            private StockEntreeRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRowChangeEvent(FactureRow row, global::System.Data.DataRowAction action) {
+            public StockEntreeRowChangeEvent(StockEntreeRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FactureRow Row {
+            public StockEntreeRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -775,7 +837,7 @@ namespace LogiS {
         }
     }
 }
-namespace LogiS.DataSetFactureTableAdapters {
+namespace LogiS.DataSetStockEntreeTableAdapters {
     
     
     /// <summary>
@@ -787,7 +849,7 @@ namespace LogiS.DataSetFactureTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FactureTableAdapter : global::System.ComponentModel.Component {
+    public partial class StockEntreeTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -801,7 +863,7 @@ namespace LogiS.DataSetFactureTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public FactureTableAdapter() {
+        public StockEntreeTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -898,49 +960,36 @@ namespace LogiS.DataSetFactureTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Facture";
-            tableMapping.ColumnMappings.Add("idfacture", "idfacture");
-            tableMapping.ColumnMappings.Add("date_facture", "date_facture");
-            tableMapping.ColumnMappings.Add("date_terme", "date_terme");
-            tableMapping.ColumnMappings.Add("montant", "montant");
-            tableMapping.ColumnMappings.Add("avance", "avance");
-            tableMapping.ColumnMappings.Add("remise", "remise");
-            tableMapping.ColumnMappings.Add("nomfichier", "nomfichier");
-            tableMapping.ColumnMappings.Add("extfichier", "extfichier");
+            tableMapping.DataSetTable = "StockEntree";
+            tableMapping.ColumnMappings.Add("identree", "identree");
+            tableMapping.ColumnMappings.Add("date_jour", "date_jour");
+            tableMapping.ColumnMappings.Add("qteajoute", "qteajoute");
+            tableMapping.ColumnMappings.Add("nomcommercial", "nomcommercial");
+            tableMapping.ColumnMappings.Add("unite", "unite");
+            tableMapping.ColumnMappings.Add("numlot", "numlot");
+            tableMapping.ColumnMappings.Add("expiration", "expiration");
+            tableMapping.ColumnMappings.Add("nomdepot", "nomdepot");
+            tableMapping.ColumnMappings.Add("libelle", "libelle");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Facture] WHERE (([idfacture] = @Original_idfacture) AND ([date_facture] = @Original_date_facture) AND ([date_terme] = @Original_date_terme) AND ([montant] = @Original_montant) AND ([avance] = @Original_avance) AND ([remise] = @Original_remise) AND ([nomfichier] = @Original_nomfichier) AND ([extfichier] = @Original_extfichier))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[StockEntree] WHERE (([identree] = @Original_identree) AND ([da" +
+                "te_jour] = @Original_date_jour) AND ([qteajoute] = @Original_qteajoute))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idfacture", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idfacture", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_facture", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_facture", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_terme", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_terme", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_montant", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "montant", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_avance", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "avance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remise", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "remise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomfichier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_extfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extfichier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_identree", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identree", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_jour", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_jour", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_qteajoute", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qteajoute", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Facture] SET [idfacture] = @idfacture, [date_facture] = @date_facture, [date_terme] = @date_terme, [montant] = @montant, [avance] = @avance, [remise] = @remise, [nomfichier] = @nomfichier, [extfichier] = @extfichier WHERE (([idfacture] = @Original_idfacture) AND ([date_facture] = @Original_date_facture) AND ([date_terme] = @Original_date_terme) AND ([montant] = @Original_montant) AND ([avance] = @Original_avance) AND ([remise] = @Original_remise) AND ([nomfichier] = @Original_nomfichier) AND ([extfichier] = @Original_extfichier));
-SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier, extfichier FROM Facture WHERE (idfacture = @idfacture)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StockEntree] SET [identree] = @identree, [date_jour] = @date_jour, [qteajoute] = @qteajoute WHERE (([identree] = @Original_identree) AND ([date_jour] = @Original_date_jour) AND ([qteajoute] = @Original_qteajoute));
+SELECT identree, date_jour, qteajoute FROM StockEntree WHERE (identree = @identree)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idfacture", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idfacture", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_facture", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_facture", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_terme", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_terme", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@montant", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "montant", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@avance", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "avance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@remise", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "remise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomfichier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extfichier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idfacture", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idfacture", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_facture", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_facture", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_terme", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_terme", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_montant", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "montant", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_avance", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "avance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_remise", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "remise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nomfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nomfichier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_extfichier", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extfichier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@identree", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identree", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_jour", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_jour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qteajoute", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qteajoute", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_identree", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identree", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_jour", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_jour", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_qteajoute", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qteajoute", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -956,8 +1005,11 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier, " +
-                "extfichier FROM dbo.Facture";
+            this._commandCollection[0].CommandText = @"SELECT se.identree, se.date_jour, p.nomcommercial, p.unite, ps.numlot, ps.expiration, se.qteajoute, se.libelle, d.nomdepot
+FROM   StockEntree AS se INNER JOIN
+             ProduitStock AS ps ON se.idstock = ps.idstock INNER JOIN
+             Produit AS p ON ps.idproduit = p.idproduit INNER JOIN
+             Depot AS d ON se.iddepot = d.iddepot";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -965,7 +1017,7 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetFacture.FactureDataTable dataTable) {
+        public virtual int Fill(DataSetStockEntree.StockEntreeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -978,9 +1030,9 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetFacture.FactureDataTable GetData() {
+        public virtual DataSetStockEntree.StockEntreeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetFacture.FactureDataTable dataTable = new DataSetFacture.FactureDataTable();
+            DataSetStockEntree.StockEntreeDataTable dataTable = new DataSetStockEntree.StockEntreeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -988,15 +1040,15 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetFacture.FactureDataTable dataTable) {
+        public virtual int Update(DataSetStockEntree.StockEntreeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetFacture dataSet) {
-            return this.Adapter.Update(dataSet, "Facture");
+        public virtual int Update(DataSetStockEntree dataSet) {
+            return this.Adapter.Update(dataSet, "StockEntree");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1018,25 +1070,10 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idfacture, System.DateTime Original_date_facture, System.DateTime Original_date_terme, decimal Original_montant, decimal Original_avance, decimal Original_remise, string Original_nomfichier, string Original_extfichier) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idfacture));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_date_facture));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_date_terme));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_montant));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_avance));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_remise));
-            if ((Original_nomfichier == null)) {
-                throw new global::System.ArgumentNullException("Original_nomfichier");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_nomfichier));
-            }
-            if ((Original_extfichier == null)) {
-                throw new global::System.ArgumentNullException("Original_extfichier");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_extfichier));
-            }
+        public virtual int Delete(int Original_identree, System.DateTime Original_date_jour, int Original_qteajoute) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_identree));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_date_jour));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_qteajoute));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1057,59 +1094,13 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int idfacture, 
-                    System.DateTime date_facture, 
-                    System.DateTime date_terme, 
-                    decimal montant, 
-                    decimal avance, 
-                    decimal remise, 
-                    string nomfichier, 
-                    string extfichier, 
-                    int Original_idfacture, 
-                    System.DateTime Original_date_facture, 
-                    System.DateTime Original_date_terme, 
-                    decimal Original_montant, 
-                    decimal Original_avance, 
-                    decimal Original_remise, 
-                    string Original_nomfichier, 
-                    string Original_extfichier) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idfacture));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(date_facture));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(date_terme));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(montant));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(avance));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(remise));
-            if ((nomfichier == null)) {
-                throw new global::System.ArgumentNullException("nomfichier");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(nomfichier));
-            }
-            if ((extfichier == null)) {
-                throw new global::System.ArgumentNullException("extfichier");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(extfichier));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_idfacture));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_date_facture));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_date_terme));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_montant));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Original_avance));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_remise));
-            if ((Original_nomfichier == null)) {
-                throw new global::System.ArgumentNullException("Original_nomfichier");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_nomfichier));
-            }
-            if ((Original_extfichier == null)) {
-                throw new global::System.ArgumentNullException("Original_extfichier");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_extfichier));
-            }
+        public virtual int Update(int identree, System.DateTime date_jour, int qteajoute, int Original_identree, System.DateTime Original_date_jour, int Original_qteajoute) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(identree));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(date_jour));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(qteajoute));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_identree));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Original_date_jour));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_qteajoute));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1130,8 +1121,8 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime date_facture, System.DateTime date_terme, decimal montant, decimal avance, decimal remise, string nomfichier, string extfichier, int Original_idfacture, System.DateTime Original_date_facture, System.DateTime Original_date_terme, decimal Original_montant, decimal Original_avance, decimal Original_remise, string Original_nomfichier, string Original_extfichier) {
-            return this.Update(Original_idfacture, date_facture, date_terme, montant, avance, remise, nomfichier, extfichier, Original_idfacture, Original_date_facture, Original_date_terme, Original_montant, Original_avance, Original_remise, Original_nomfichier, Original_extfichier);
+        public virtual int Update(System.DateTime date_jour, int qteajoute, int Original_identree, System.DateTime Original_date_jour, int Original_qteajoute) {
+            return this.Update(Original_identree, date_jour, qteajoute, Original_identree, Original_date_jour, Original_qteajoute);
         }
     }
     
@@ -1147,7 +1138,7 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         
         private UpdateOrderOption _updateOrder;
         
-        private FactureTableAdapter _factureTableAdapter;
+        private StockEntreeTableAdapter _stockEntreeTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1169,12 +1160,12 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public FactureTableAdapter FactureTableAdapter {
+        public StockEntreeTableAdapter StockEntreeTableAdapter {
             get {
-                return this._factureTableAdapter;
+                return this._stockEntreeTableAdapter;
             }
             set {
-                this._factureTableAdapter = value;
+                this._stockEntreeTableAdapter = value;
             }
         }
         
@@ -1197,9 +1188,9 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._factureTableAdapter != null) 
-                            && (this._factureTableAdapter.Connection != null))) {
-                    return this._factureTableAdapter.Connection;
+                if (((this._stockEntreeTableAdapter != null) 
+                            && (this._stockEntreeTableAdapter.Connection != null))) {
+                    return this._stockEntreeTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1214,7 +1205,7 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._factureTableAdapter != null)) {
+                if ((this._stockEntreeTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1226,14 +1217,14 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DataSetFacture dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetStockEntree dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._factureTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Facture.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._stockEntreeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.StockEntree.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._factureTableAdapter.Update(updatedRows));
+                    result = (result + this._stockEntreeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1245,13 +1236,13 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DataSetFacture dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetStockEntree dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._factureTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Facture.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._stockEntreeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.StockEntree.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._factureTableAdapter.Update(addedRows));
+                    result = (result + this._stockEntreeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1263,13 +1254,13 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DataSetFacture dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetStockEntree dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._factureTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Facture.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._stockEntreeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.StockEntree.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._factureTableAdapter.Update(deletedRows));
+                    result = (result + this._stockEntreeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1305,15 +1296,15 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DataSetFacture dataSet) {
+        public virtual int UpdateAll(DataSetStockEntree dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._factureTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._factureTableAdapter.Connection) == false))) {
+            if (((this._stockEntreeTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._stockEntreeTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1349,13 +1340,13 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._factureTableAdapter != null)) {
-                    revertConnections.Add(this._factureTableAdapter, this._factureTableAdapter.Connection);
-                    this._factureTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._factureTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._factureTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._factureTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._factureTableAdapter.Adapter);
+                if ((this._stockEntreeTableAdapter != null)) {
+                    revertConnections.Add(this._stockEntreeTableAdapter, this._stockEntreeTableAdapter.Connection);
+                    this._stockEntreeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._stockEntreeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._stockEntreeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._stockEntreeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._stockEntreeTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1416,9 +1407,9 @@ SELECT idfacture, date_facture, date_terme, montant, avance, remise, nomfichier,
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._factureTableAdapter != null)) {
-                    this._factureTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._factureTableAdapter]));
-                    this._factureTableAdapter.Transaction = null;
+                if ((this._stockEntreeTableAdapter != null)) {
+                    this._stockEntreeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._stockEntreeTableAdapter]));
+                    this._stockEntreeTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

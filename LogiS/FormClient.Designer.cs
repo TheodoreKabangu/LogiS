@@ -30,79 +30,82 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClient));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnTriCroissant = new System.Windows.Forms.Button();
+            this.btnSolde = new System.Windows.Forms.Button();
+            this.btnPayement = new System.Windows.Forms.Button();
+            this.btnFacture = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnFacturer = new System.Windows.Forms.Button();
             this.btnPayer = new System.Windows.Forms.Button();
+            this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnNouveau = new System.Windows.Forms.Button();
-            this.dgvPrev = new System.Windows.Forms.DataGridView();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetClient = new LogiS.DataSetClient();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.clientTableAdapter = new LogiS.DataSetClientTableAdapters.ClientTableAdapter();
+            this.dgvClient = new System.Windows.Forms.DataGridView();
             this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Montant_total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Montant_paye = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Montant_reste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetClient = new LogiS.DataSetClient();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.clientTableAdapter = new LogiS.DataSetClientTableAdapters.ClientTableAdapter();
+            this.txtNom = new System.Windows.Forms.TextBox();
             this.btnAfficher = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBanque = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClient)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(482, 71);
+            this.txtMontant.Location = new System.Drawing.Point(363, 71);
             this.txtMontant.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtMontant.MaxLength = 75;
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(117, 28);
             this.txtMontant.TabIndex = 854;
+            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(421, 74);
+            this.label1.Location = new System.Drawing.Point(302, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.Size = new System.Drawing.Size(84, 22);
             this.label1.TabIndex = 852;
-            this.label1.Text = "Amount :";
+            this.label1.Text = "Montant :";
             // 
-            // comboBox1
+            // cbo
             // 
-            this.comboBox1.DropDownHeight = 200;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbo.DropDownHeight = 200;
+            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo.FormattingEnabled = true;
+            this.cbo.IntegralHeight = false;
+            this.cbo.Items.AddRange(new object[] {
             "Max",
             "Min"});
-            this.comboBox1.Location = new System.Drawing.Point(602, 71);
-            this.comboBox1.MaxDropDownItems = 10;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(89, 30);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 850;
+            this.cbo.Location = new System.Drawing.Point(483, 71);
+            this.cbo.MaxDropDownItems = 10;
+            this.cbo.Name = "cbo";
+            this.cbo.Size = new System.Drawing.Size(89, 30);
+            this.cbo.Sorted = true;
+            this.cbo.TabIndex = 850;
+            this.cbo.SelectedIndexChanged += new System.EventHandler(this.cbo_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -117,12 +120,16 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(115)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnTriCroissant);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(220)))));
+            this.panel1.Controls.Add(this.btnSolde);
+            this.panel1.Controls.Add(this.btnPayement);
+            this.panel1.Controls.Add(this.btnFacture);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnFacturer);
             this.panel1.Controls.Add(this.btnPayer);
+            this.panel1.Controls.Add(this.btnBanque);
+            this.panel1.Controls.Add(this.btnSupprimer);
             this.panel1.Controls.Add(this.btnModifier);
             this.panel1.Controls.Add(this.btnNouveau);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -131,45 +138,72 @@
             this.panel1.Size = new System.Drawing.Size(703, 30);
             this.panel1.TabIndex = 849;
             // 
-            // button2
+            // btnSolde
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(311, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 849;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSolde.BackColor = System.Drawing.Color.Transparent;
+            this.btnSolde.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSolde.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSolde.Enabled = false;
+            this.btnSolde.FlatAppearance.BorderSize = 0;
+            this.btnSolde.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSolde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSolde.Image = ((System.Drawing.Image)(resources.GetObject("btnSolde.Image")));
+            this.btnSolde.Location = new System.Drawing.Point(591, 0);
+            this.btnSolde.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnSolde.Name = "btnSolde";
+            this.btnSolde.Size = new System.Drawing.Size(30, 30);
+            this.btnSolde.TabIndex = 854;
+            this.toolTip1.SetToolTip(this.btnSolde, "Solde");
+            this.btnSolde.UseVisualStyleBackColor = false;
+            this.btnSolde.Click += new System.EventHandler(this.btnSolde_Click);
             // 
-            // btnTriCroissant
+            // btnPayement
             // 
-            this.btnTriCroissant.BackColor = System.Drawing.Color.Transparent;
-            this.btnTriCroissant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTriCroissant.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnTriCroissant.FlatAppearance.BorderSize = 0;
-            this.btnTriCroissant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnTriCroissant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTriCroissant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnTriCroissant.Image = ((System.Drawing.Image)(resources.GetObject("btnTriCroissant.Image")));
-            this.btnTriCroissant.Location = new System.Drawing.Point(281, 0);
-            this.btnTriCroissant.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnTriCroissant.Name = "btnTriCroissant";
-            this.btnTriCroissant.Size = new System.Drawing.Size(30, 30);
-            this.btnTriCroissant.TabIndex = 848;
-            this.btnTriCroissant.UseVisualStyleBackColor = false;
+            this.btnPayement.BackColor = System.Drawing.Color.Transparent;
+            this.btnPayement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPayement.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPayement.Enabled = false;
+            this.btnPayement.FlatAppearance.BorderSize = 0;
+            this.btnPayement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPayement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnPayement.Image = ((System.Drawing.Image)(resources.GetObject("btnPayement.Image")));
+            this.btnPayement.Location = new System.Drawing.Point(561, 0);
+            this.btnPayement.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnPayement.Name = "btnPayement";
+            this.btnPayement.Size = new System.Drawing.Size(30, 30);
+            this.btnPayement.TabIndex = 853;
+            this.toolTip1.SetToolTip(this.btnPayement, "Payements");
+            this.btnPayement.UseVisualStyleBackColor = false;
+            this.btnPayement.Click += new System.EventHandler(this.btnPayement_Click);
+            // 
+            // btnFacture
+            // 
+            this.btnFacture.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFacture.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnFacture.Enabled = false;
+            this.btnFacture.FlatAppearance.BorderSize = 0;
+            this.btnFacture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFacture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnFacture.Image = ((System.Drawing.Image)(resources.GetObject("btnFacture.Image")));
+            this.btnFacture.Location = new System.Drawing.Point(531, 0);
+            this.btnFacture.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnFacture.Name = "btnFacture";
+            this.btnFacture.Size = new System.Drawing.Size(30, 30);
+            this.btnFacture.TabIndex = 852;
+            this.btnFacture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnFacture, "Factures");
+            this.btnFacture.UseVisualStyleBackColor = false;
+            this.btnFacture.Click += new System.EventHandler(this.btnFacture_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(280, 0);
+            this.panel3.Location = new System.Drawing.Point(530, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 30);
             this.panel3.TabIndex = 847;
@@ -189,47 +223,101 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(30, 30);
             this.btnExit.TabIndex = 838;
+            this.toolTip1.SetToolTip(this.btnExit, "Fermer");
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnFacturer
+            // 
+            this.btnFacturer.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacturer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFacturer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnFacturer.Enabled = false;
+            this.btnFacturer.FlatAppearance.BorderSize = 0;
+            this.btnFacturer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFacturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnFacturer.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturer.Image")));
+            this.btnFacturer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturer.Location = new System.Drawing.Point(440, 0);
+            this.btnFacturer.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnFacturer.Name = "btnFacturer";
+            this.btnFacturer.Size = new System.Drawing.Size(90, 30);
+            this.btnFacturer.TabIndex = 855;
+            this.btnFacturer.Text = "Facturer";
+            this.btnFacturer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnFacturer, "Facturer ce client");
+            this.btnFacturer.UseVisualStyleBackColor = false;
+            this.btnFacturer.Click += new System.EventHandler(this.btnFacturer_Click);
             // 
             // btnPayer
             // 
             this.btnPayer.BackColor = System.Drawing.Color.Transparent;
             this.btnPayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPayer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPayer.Enabled = false;
             this.btnPayer.FlatAppearance.BorderSize = 0;
             this.btnPayer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btnPayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnPayer.Image = ((System.Drawing.Image)(resources.GetObject("btnPayer.Image")));
             this.btnPayer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayer.Location = new System.Drawing.Point(160, 0);
+            this.btnPayer.Location = new System.Drawing.Point(350, 0);
             this.btnPayer.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnPayer.Name = "btnPayer";
-            this.btnPayer.Size = new System.Drawing.Size(120, 30);
+            this.btnPayer.Size = new System.Drawing.Size(90, 30);
             this.btnPayer.TabIndex = 839;
-            this.btnPayer.Text = "Payement";
+            this.btnPayer.Text = "Percevoir";
             this.btnPayer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnPayer, "Percevoir le cash");
             this.btnPayer.UseVisualStyleBackColor = false;
+            this.btnPayer.Click += new System.EventHandler(this.btnPayer_Click);
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.BackColor = System.Drawing.Color.Transparent;
+            this.btnSupprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSupprimer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSupprimer.Enabled = false;
+            this.btnSupprimer.FlatAppearance.BorderSize = 0;
+            this.btnSupprimer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSupprimer.Image = ((System.Drawing.Image)(resources.GetObject("btnSupprimer.Image")));
+            this.btnSupprimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupprimer.Location = new System.Drawing.Point(165, 0);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(95, 30);
+            this.btnSupprimer.TabIndex = 856;
+            this.btnSupprimer.Text = "Supprimer";
+            this.btnSupprimer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnSupprimer, "Supprimer ce client");
+            this.btnSupprimer.UseVisualStyleBackColor = false;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // btnModifier
             // 
             this.btnModifier.BackColor = System.Drawing.Color.Transparent;
             this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnModifier.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnModifier.Enabled = false;
             this.btnModifier.FlatAppearance.BorderSize = 0;
             this.btnModifier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnModifier.Image = ((System.Drawing.Image)(resources.GetObject("btnModifier.Image")));
             this.btnModifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModifier.Location = new System.Drawing.Point(80, 0);
+            this.btnModifier.Location = new System.Drawing.Point(85, 0);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(80, 30);
             this.btnModifier.TabIndex = 839;
-            this.btnModifier.Text = "Edit";
+            this.btnModifier.Text = "Modifier";
             this.btnModifier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnModifier, "Modifier ce client");
             this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnNouveau
             // 
@@ -245,85 +333,63 @@
             this.btnNouveau.Location = new System.Drawing.Point(0, 0);
             this.btnNouveau.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnNouveau.Name = "btnNouveau";
-            this.btnNouveau.Size = new System.Drawing.Size(80, 30);
+            this.btnNouveau.Size = new System.Drawing.Size(85, 30);
             this.btnNouveau.TabIndex = 839;
-            this.btnNouveau.Text = "New";
+            this.btnNouveau.Text = "Nouveau";
             this.btnNouveau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnNouveau, "Nouveau client");
             this.btnNouveau.UseVisualStyleBackColor = false;
+            this.btnNouveau.Click += new System.EventHandler(this.btnNouveau_Click);
             // 
-            // dgvPrev
+            // dgvClient
             // 
-            this.dgvPrev.AllowUserToAddRows = false;
-            this.dgvPrev.AllowUserToDeleteRows = false;
-            this.dgvPrev.AllowUserToResizeColumns = false;
-            this.dgvPrev.AllowUserToResizeRows = false;
-            this.dgvPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvClient.AllowUserToAddRows = false;
+            this.dgvClient.AllowUserToDeleteRows = false;
+            this.dgvClient.AllowUserToResizeColumns = false;
+            this.dgvClient.AllowUserToResizeRows = false;
+            this.dgvClient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPrev.AutoGenerateColumns = false;
-            this.dgvPrev.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvPrev.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPrev.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrev.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPrev.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrev.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvClient.AutoGenerateColumns = false;
+            this.dgvClient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idclientDataGridViewTextBoxColumn,
-            this.Montant_total,
-            this.Montant_paye,
             this.Montant_reste,
             this.nomclientDataGridViewTextBoxColumn,
             this.telephoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
-            this.dgvPrev.DataSource = this.clientBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrev.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvPrev.EnableHeadersVisualStyles = false;
-            this.dgvPrev.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.dgvPrev.Location = new System.Drawing.Point(12, 107);
-            this.dgvPrev.MultiSelect = false;
-            this.dgvPrev.Name = "dgvPrev";
-            this.dgvPrev.ReadOnly = true;
-            this.dgvPrev.RowHeadersVisible = false;
-            this.dgvPrev.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvPrev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrev.Size = new System.Drawing.Size(679, 332);
-            this.dgvPrev.TabIndex = 848;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataMember = "Client";
-            this.clientBindingSource.DataSource = this.dataSetClient;
-            // 
-            // dataSetClient
-            // 
-            this.dataSetClient.DataSetName = "DataSetClient";
-            this.dataSetClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 27);
-            this.panel2.TabIndex = 847;
-            // 
-            // clientTableAdapter
-            // 
-            this.clientTableAdapter.ClearBeforeFill = true;
+            this.dgvClient.DataSource = this.clientBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClient.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvClient.EnableHeadersVisualStyles = false;
+            this.dgvClient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.dgvClient.Location = new System.Drawing.Point(12, 107);
+            this.dgvClient.MultiSelect = false;
+            this.dgvClient.Name = "dgvClient";
+            this.dgvClient.ReadOnly = true;
+            this.dgvClient.RowHeadersVisible = false;
+            this.dgvClient.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClient.Size = new System.Drawing.Size(679, 332);
+            this.dgvClient.TabIndex = 848;
+            this.dgvClient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClient_CellClick);
             // 
             // idclientDataGridViewTextBoxColumn
             // 
@@ -332,34 +398,12 @@
             this.idclientDataGridViewTextBoxColumn.Name = "idclientDataGridViewTextBoxColumn";
             this.idclientDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Montant_total
-            // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Montant_total.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Montant_total.HeaderText = "M. total";
-            this.Montant_total.MinimumWidth = 110;
-            this.Montant_total.Name = "Montant_total";
-            this.Montant_total.ReadOnly = true;
-            this.Montant_total.Width = 110;
-            // 
-            // Montant_paye
-            // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Montant_paye.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Montant_paye.HeaderText = "M. payé";
-            this.Montant_paye.MinimumWidth = 110;
-            this.Montant_paye.Name = "Montant_paye";
-            this.Montant_paye.ReadOnly = true;
-            this.Montant_paye.Width = 110;
-            // 
             // Montant_reste
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Montant_reste.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Montant_reste.HeaderText = "M. reste";
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Montant_reste.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Montant_reste.HeaderText = "M. reste $";
             this.Montant_reste.MinimumWidth = 110;
             this.Montant_reste.Name = "Montant_reste";
             this.Montant_reste.ReadOnly = true;
@@ -392,14 +436,37 @@
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // textBox1
+            // clientBindingSource
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 71);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox1.MaxLength = 75;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 28);
-            this.textBox1.TabIndex = 855;
+            this.clientBindingSource.DataMember = "Client";
+            this.clientBindingSource.DataSource = this.dataSetClient;
+            // 
+            // dataSetClient
+            // 
+            this.dataSetClient.DataSetName = "DataSetClient";
+            this.dataSetClient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(137)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(703, 27);
+            this.panel2.TabIndex = 847;
+            // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtNom
+            // 
+            this.txtNom.Location = new System.Drawing.Point(57, 71);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtNom.MaxLength = 75;
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(201, 28);
+            this.txtNom.TabIndex = 855;
             // 
             // btnAfficher
             // 
@@ -410,12 +477,37 @@
             this.btnAfficher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAfficher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnAfficher.Image = ((System.Drawing.Image)(resources.GetObject("btnAfficher.Image")));
-            this.btnAfficher.Location = new System.Drawing.Point(281, 71);
+            this.btnAfficher.Location = new System.Drawing.Point(258, 71);
             this.btnAfficher.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAfficher.Name = "btnAfficher";
             this.btnAfficher.Size = new System.Drawing.Size(30, 21);
             this.btnAfficher.TabIndex = 856;
+            this.toolTip1.SetToolTip(this.btnAfficher, "Afficher");
             this.btnAfficher.UseVisualStyleBackColor = false;
+            this.btnAfficher.Click += new System.EventHandler(this.btnAfficher_Click);
+            // 
+            // btnBanque
+            // 
+            this.btnBanque.BackColor = System.Drawing.Color.Transparent;
+            this.btnBanque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBanque.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBanque.Enabled = false;
+            this.btnBanque.FlatAppearance.BorderSize = 0;
+            this.btnBanque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBanque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnBanque.Image = ((System.Drawing.Image)(resources.GetObject("btnBanque.Image")));
+            this.btnBanque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBanque.Location = new System.Drawing.Point(260, 0);
+            this.btnBanque.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnBanque.Name = "btnBanque";
+            this.btnBanque.Size = new System.Drawing.Size(90, 30);
+            this.btnBanque.TabIndex = 857;
+            this.btnBanque.Text = "Percevoir";
+            this.btnBanque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnBanque, "Percevoir par baque");
+            this.btnBanque.UseVisualStyleBackColor = false;
+            this.btnBanque.Click += new System.EventHandler(this.btnBanque_Click);
             // 
             // FormClient
             // 
@@ -424,21 +516,22 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(703, 451);
             this.Controls.Add(this.btnAfficher);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvPrev);
+            this.Controls.Add(this.dgvClient);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormClient";
             this.Text = "FormClient";
             this.Load += new System.EventHandler(this.FormClient_Load);
+            this.Shown += new System.EventHandler(this.FormClient_Shown);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPrev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetClient)).EndInit();
             this.ResumeLayout(false);
@@ -450,30 +543,33 @@
 
         public System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cbo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button btnTriCroissant;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btnExit;
         public System.Windows.Forms.Button btnPayer;
         public System.Windows.Forms.Button btnModifier;
         public System.Windows.Forms.Button btnNouveau;
-        public System.Windows.Forms.DataGridView dgvPrev;
+        public System.Windows.Forms.DataGridView dgvClient;
         private System.Windows.Forms.Panel panel2;
         private DataSetClient dataSetClient;
         private System.Windows.Forms.BindingSource clientBindingSource;
         private DataSetClientTableAdapters.ClientTableAdapter clientTableAdapter;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.Button btnAfficher;
         private System.Windows.Forms.DataGridViewTextBoxColumn idclientDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Montant_total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Montant_paye;
         private System.Windows.Forms.DataGridViewTextBoxColumn Montant_reste;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomclientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.Button btnAfficher;
+        private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Button btnSolde;
+        public System.Windows.Forms.Button btnPayement;
+        public System.Windows.Forms.Button btnFacture;
+        public System.Windows.Forms.Button btnFacturer;
+        public System.Windows.Forms.Button btnSupprimer;
+        public System.Windows.Forms.Button btnBanque;
 
     }
 }

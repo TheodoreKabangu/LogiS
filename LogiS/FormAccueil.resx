@@ -150,7 +150,7 @@
         brW85qWVuIEuIr0zD8D9zkXieR+/j/rYoWDVQAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnInscription.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDepot.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQlJREFUSEvt
         l70OAUEUhfcd6HQ0GgrUeolH0KqVSjqvwEt4ALVSrdKqPIGIcE7cK7OT/WFn7K5kT/JlZ+/s3G8lN5IN
@@ -160,7 +160,7 @@
         NuHXA4na07MjMJY1oaPIBMET7LnnzYCOCgcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnCompta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnColis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAz1JREFUSEvN
         l0nITlEYx18yZiZDiKSMmYVkDMXOkGFlYUGRudiiLBQLVqaFmSxQForInIVspJB5nhamzNPvd957v+9+
@@ -178,6 +178,19 @@
         8S14afPCnqtO8wXWdjQ4Vx/60qe+i8oSMKAF78fBW8RmSE5OBzaTtdHWOc7VR5WvUTmyXKzPU2B9en/2
         NNobYdsxn2njdafYNpWtXuC/Ce9UHoFi27Fcl4Ral8s3HsZF7TKVyfwBuEPexsge1XMAAAAASUVORK5C
         YII=
+</value>
+  </data>
+  <data name="btnStock.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAZpJREFUSEvF
+        lr0vBEEchlehIKFSqDWISnQkolDptbRCKeHvuKhE5aOR+CMohZZQUPpMSHxGJHify8zlzPrFzu0sT/Jc
+        JjPv/t67TXZzWQmGnX/KgnxzzrNRNZ1yQ77KEyfrddkhK2FInsojOSBXnayPJV+CTFKm5aPckV1sCF8M
+        7HH2IMmWpl3W5Ltclm3S01wMnJEhyzVc2xK9ck9eyQk2AsJiD1mu4VpmRMFjci65vXNyUjKw+VeExZyR
+        Ics1T/JMFn7kZuWLPJAf8tPJekp6wmLOwjwzmMVMEx6VLfksZ9j4hbDYglmUb0o6vtEnL+WdLHprihYD
+        M+8lHXTVGZQ38kLycihKTDHwi+m4ljz79Y8luSZjBsUWk6WDrn42PK0MSpJPNsjAzG/Lfcnbp4hkY/N0
+        5NiVt/KwoGRj83TkSHbrDMx8eNAjF6W/VazZ85TNNwgPxiSvPH+rWI9KT9l8A/PAIFk+2SADM59skIGZ
+        TzbIwMwnG2Rg5pMNMjDzyQYZmPkV6f+2VCUdObrlSITjzp/OLOn4T7LsCzmbvy6tuRxHAAAAAElFTkSu
+        QmCC
 </value>
   </data>
   <data name="btnTresorerie.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
